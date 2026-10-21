@@ -22,7 +22,8 @@
 <section class="panel"><h2 class="title">∑ Schritt-für-Schritt-Rechnung</h2><div class="steps" id="steps"></div></section>
 </aside></main>
 <section class="panel quick"><h2>⚡ Schnellwahl</h2><div class="buttons"><button class="btn secondary" data-h="0" data-k="0" data-a="1">Grundparabel x²</button><button class="btn secondary" data-h="3" data-k="0" data-a="1">Nach rechts</button><button class="btn secondary" data-h="-3" data-k="0" data-a="1">Nach links</button><button class="btn secondary" data-h="0" data-k="2" data-a="1">Nach oben</button><button class="btn secondary" data-h="0" data-k="-2" data-a="1">Nach unten</button><button class="btn secondary" data-h="-2" data-k="-1" data-a="-1">Spiegeln & verschieben</button></div></section>
-<footer>Parabolic Shifter for BED · Läuft vollständig im Browser · Keine Daten werden übertragen</footer></div>
+<section class="panel quick" aria-labelledby="merksatzTitle"><h2 id="merksatzTitle">💡 Merksatz</h2><p style="color:#dce8ff;margin:0">Bei <strong>f(x) = a(x − h)² + k</strong> verschiebt <strong>h</strong> die Parabel nach rechts (bei positivem h) oder links (bei negativem h) – das Vorzeichen in der Klammer ist also umgekehrt. <strong>k</strong> verschiebt sie nach oben oder unten. <strong>a</strong> bestimmt die Öffnungsrichtung und wie breit oder schmal die Parabel ist.</p></section>
+<footer>Parabolic Shifter for BED · Läuft vollständig im Browser · Keine Daten werden übertragen<br><strong style="display:inline-block;margin-top:8px;color:#aebfda;letter-spacing:.04em">Gecodet für A. Bednar</strong></footer></div>
 <script>
 (()=>{const $=id=>document.getElementById(id),s={h:3,k:2,a:1,z:10};const f=n=>{if(Math.abs(n)<1e-9)n=0;return n.toLocaleString('de-DE',{maximumFractionDigits:2})},sign=n=>n<0?'− '+f(-n):'+ '+f(n);
 function formula(){let a=s.a===1?'':s.a===-1?'−':f(s.a),inside=s.h<0?'x + '+f(-s.h):s.h===0?'x':'x − '+f(s.h),tail=s.k===0?'':' '+sign(s.k);return 'f(x) = '+a+'('+inside+')²'+tail}
